@@ -9,26 +9,12 @@ body {
 
 /* HEADER */
 
-nav {
-  display: flex;
-  align-items: center;
-  background-color: #c40202;
-  padding: 1.5em;
-}
-
 .logo {
   width: 20%;
-  border-radius: 4px;
+  margin: 0.4em;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.5em;
-}
-
-.nav-links > * {
-  text-decoration: none;
-  color: black;
+.nav-link {
   font-weight: bold;
-  font-size: 1.5rem;
+  color: #033159;
 }
