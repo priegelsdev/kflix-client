@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import MainView from "./components/MainView/MainView";
 
 export default function App() {
   const exArr = ['hello', 'hi', 'welcome']
@@ -13,6 +14,7 @@ export default function App() {
 
   return ( 
     <div>
+      <MainView />
       <div>{test}</div>
       <button onClick={changeText}>Click me</button>
     </div>
