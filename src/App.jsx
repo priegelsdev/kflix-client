@@ -1,22 +1,21 @@
 import React, {useEffect, useState} from "react";
-import MainView from "./components/MainView/MainView";
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Link } from "react-router-dom";
+
+import MainView from "./components/MainView";
+
+//layout
+import Layout from "./components/Layout";
 
 export default function App() {
-  const exArr = ['hello', 'hi', 'welcome']
-  let rdmNum = Math.floor(Math.random() * 3)
-
-  const [test, setTest] = useState(exArr[rdmNum])
-
-  function changeText() {
-    rdmNum = Math.floor(Math.random() * 3)
-    setTest(exArr[rdmNum])
-  }
-
-  return ( 
-    <div>
-      <MainView />
-      <div>{test}</div>
-      <button onClick={changeText}>Click me</button>
-    </div>
+  // define router variable used by RouterProvider in return statement
+  // createBrowserRouter will utilize loaders and improve app
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />}>
+        <Route index element={<MainView />} />
+      </Route>
+    )
   )
+
+  return <RouterProvider router={router} />
 }
