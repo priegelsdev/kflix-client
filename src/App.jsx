@@ -3,8 +3,11 @@ import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, L
 
 import MainView from "./components/MainView";
 
-//layout
+// layout
 import Layout from "./components/Layout";
+
+// import react-bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function App() {
   // define router variable used by RouterProvider in return statement
