@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom"
+import { LinkContainer } from 'react-router-bootstrap'
 import logo from '../img/logo.png'
 
 // react-bootstrap
@@ -12,8 +12,12 @@ export default function Header() {
         <Image className="logo rounded border border-dark" src={logo} />
       </Navbar.Brand>
       <Nav className="navbar gap-3">
-        <Nav.Link className="nav-link" href="#home">Home</Nav.Link>
-        <Nav.Link className="nav-link" href="#features">Profile</Nav.Link>
+        <LinkContainer to="/">
+          <Nav.Link className="nav-link" href="#home">Home</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/profile">
+          <Nav.Link className="nav-link" href="#features">Profile</Nav.Link>
+        </LinkContainer>
         <Button className="btn btn-danger">login/logout</Button>
       </Nav>
     </Container>
