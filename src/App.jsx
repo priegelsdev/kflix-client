@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from "react";
-import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Link } from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
 
 import MainView from "./components/MainView";
 
