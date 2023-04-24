@@ -1,11 +1,20 @@
 import MovieCard from "./MovieCard";
 import movies from "../../data";
 import { Container, Row, Col } from "react-bootstrap";
+import { useEffect } from "react";
 
 export default function MainView() {
+
+  useEffect(() => {
+    fetch("https://troubled-jungle-tabletop.glitch.me/movies")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+      }) 
+  }, [])
  
   const movieCardElements = <Container>
-    <Row>
+    <Row className="row">
       {movies.slice(0, 4).map((movie, index) => {
         return <Col sm={3} key={index}>
           <MovieCard 
@@ -41,8 +50,8 @@ export default function MainView() {
   </Container>
 
   return (
-    <Container>
+    <>
       {movieCardElements}
-    </Container>
+    </>
   )
 }

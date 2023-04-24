@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+main {
+  padding: 2em;
+}
+
 /* HEADER */
 
 .logo {
@@ -21,4 +25,8 @@ body {
 .nav-link {
   font-weight: bold;
   color: #033159;
+}
+
+.row {
+  margin-bottom: 1em;
 }
