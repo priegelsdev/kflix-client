@@ -8,7 +8,7 @@ export default function MainView() {
 
   // fetch movie data
   useEffect(() => {
-    fetch("https://troubled-jungle-tabletop.glitch.me/movies")
+    fetch("https://amplified-positive-burglar.glitch.me/movies")
       .then((response) => response.json())
       .then((data) => {
         setMovies(data)
@@ -22,9 +22,10 @@ export default function MainView() {
       {movies.slice(0, 4).map((movie, index) => {
         return <Col sm={3} key={index}>
           <MovieCard 
-            key = {movie.id}
-            title = {movie.title}
-            description = {movie.description}
+            key = {movie._id}
+            title = {movie.Title}
+            description = {movie.Description}
+            img = {movie.ImagePath}
           />
         </Col>
       })}
@@ -33,9 +34,10 @@ export default function MainView() {
       {movies.slice(4, 8).map((movie, index) => {
         return <Col sm={3} key={index}>
           <MovieCard 
-            key = {movie.id}
-            title = {movie.title}
-            description = {movie.description}
+            key = {movie._id}
+            title = {movie.Title}
+            description = {movie.Description}
+            img = {movie.ImagePath}
           />
         </Col>
       })}
@@ -44,9 +46,10 @@ export default function MainView() {
       {movies.slice(8, 10).map((movie, index) => {
         return <Col sm={6} key={index}>
           <MovieCard 
-            key = {movie.id}
-            title = {movie.title}
-            description = {movie.description}
+            key = {movie._id}
+            title = {movie.Title}
+            description = {movie.Description}
+            img = {movie.ImagePath}
           />
         </Col>
       })}
