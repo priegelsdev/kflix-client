@@ -1,17 +1,21 @@
 import MovieCard from "./MovieCard";
-import movies from "../../data";
 import { Container, Row, Col } from "react-bootstrap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function MainView() {
+  // set state for movies being fetched from API
+  const [movies, setMovies] = useState([])
 
+  // fetch movie data
   useEffect(() => {
     fetch("https://troubled-jungle-tabletop.glitch.me/movies")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
+        setMovies(data)
       }) 
   }, [])
+
+  console.log(movies)
  
   const movieCardElements = <Container>
     <Row className="row">
