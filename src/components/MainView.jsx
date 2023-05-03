@@ -17,6 +17,7 @@ export default function MainView() {
 
   console.log(movies)
  
+  // bootstrap container with rows for depicted movies
   const movieCardElements = <Container>
     <Row className="row">
       {movies.slice(0, 4).map((movie, index) => {

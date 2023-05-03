@@ -11,7 +11,7 @@ export default function Header() {
       <Navbar.Brand href="#home">
         <Image className="logo rounded border border-dark" src={logo} />
       </Navbar.Brand>
-      <Nav className="navbar gap-3">
+      <Nav className="navbar d-flex flex-nowrap gap-3">
         <LinkContainer to="/">
           <Nav.Link className="nav-link" href="#home">Home</Nav.Link>
         </LinkContainer>
